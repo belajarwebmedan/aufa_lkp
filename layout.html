@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        :root{
+            --bg1: #4abdac;
+            --bg2: #fc4a1a;
+            --bg3: #f78733;
+            --bg4: #DFDCE3;
+        }
+        
+        .container{
+            width: 100%;
+            height: 100vh;
+            /* background-color: aqua; */
+            display: grid;
+            gap: 3px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px 1fr 100px;
+        }
+        .header{
+            background-color: var(--bg1);
+            grid-column: 1/4;   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .konten{
+            background-color: var(--bg4);
+             grid-column: 1/4;
+        }
+        .footer{
+             grid-column: 1/4;
+            background-color: var(--bg1);
+        }
+        .menu{
+            display: flex;
+            /* justify-content: center; */
+            gap: 10px;
+        }
+        .menu-item{
+            border-bottom: solid;
+            border-bottom-color: var(--bg2);
+            font-weight: bold;
+        }
+    </style>
+    <div class="container">
+        <div class="header">
+            <!-- Menu -->
+             <div class="menu">
+                <div class="menu-item">Home</div>
+                <div class="menu-item">Berita</div>
+                <div class="menu-item">About</div>
+                <div class="menu-item">Contact</div>
+             </div>
+             <!-- Akhir menu -->
+        </div>
+        <div class="konten">Konten</div>
+        <div class="footer">Footer</div>
+    </div>
+    
+</body>
+</html>
