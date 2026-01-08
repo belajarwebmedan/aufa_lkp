@@ -21,7 +21,7 @@
             display: grid;
             gap: 3px;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 50px 1fr 100px;
+            grid-template-rows: 50px 1fr minmax(100px, auto);
         }
         .header{
             background-color: var(--bg1);
@@ -45,8 +45,42 @@
         }
         .menu-item{
             border-bottom: solid;
-            border-bottom-color: var(--bg2);
+            border-bottom-color: transparent;
             font-weight: bold;
+        }
+        .menu-item:hover{
+            border-bottom: solid;
+            border-bottom-color: var(--bg3);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .footer-1{
+            display: grid;
+            grid-template-columns: 4fr 1fr 1fr 1fr 1fr;
+        }
+        .footer1-item{
+            border-left:groove;
+            padding: 0.5vh;
+        }
+        .list-footer{
+            list-style: none;
+            padding-left: 0px;
+            font-size: 10pt;
+        }
+        .footer-2{
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            border-top:groove;
+        }
+        .menu-makanan{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+            gap: 10px;
+        }
+        .menu-makanan-item{
+            border-style: solid;
+            min-height: 100px;
         }
     </style>
     <div class="container">
@@ -60,8 +94,64 @@
              </div>
              <!-- Akhir menu -->
         </div>
-        <div class="konten">Konten</div>
-        <div class="footer">Footer</div>
+        <div class="konten">
+            <div class="menu-makanan">
+                <div class="menu-makanan-item">1</div>
+                <div class="menu-makanan-item">2</div>
+                <div class="menu-makanan-item">3</div>
+                <div class="menu-makanan-item">4</div>
+                <div class="menu-makanan-item">5</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-1">
+                <div class="footer-1-item">
+                    <b>Cafe Kampung Kecil</B>
+                    <p>Menyediakan makanan Khas Medan</p>
+                </div>
+                <div class="footer1-item">
+                    <b>Discover</b>
+                    <ul class="list-footer">
+                        <li>Buy & Sell</li>
+                        <li>Merchant</li>
+                        <li>Giving Back</li>
+                        <li>Help & Support</li>
+                    </ul>
+                </div>
+                <div class="footer1-item">
+                    <b>About</b>
+                    <ul class="list-footer">
+                        <li>Staff</li>
+                        <li>Team</li>
+                        <li>Careers</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div class="footer1-item">
+                   <b>Resource</b> 
+                    <ul class="list-footer">
+                        <li>Scurity</li>
+                        <li>Global</li>
+                        <li>Chart</li>
+                        <li>Privacy</li>
+                    </ul>
+                </div>
+                <div class="footer1-item">
+                    <b>Social</b>
+                    <ul class="list-footer">
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Whatshap</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-2">
+                <div class="footer2-item">
+                   Copyright Muhammad Zen  &copy; 2026
+                </div>
+            </div>
+        </div>
     </div>
     
 </body>
