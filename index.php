@@ -113,6 +113,29 @@
             background-color: var(--bg2);
             padding: 5px;
         }
+        .kontak{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            min-height: 200px;
+            background-color: var(--bg4);
+        }
+        .input-text{
+            width: 90%;
+            padding: 5px;
+            border-radius: 15px;
+            border-color: var(--bg1);
+        }
+        .tombol{
+            background-color: var(--bg1);
+            border-color: transparent;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none; /* Menghilangkan garis bawah */
+            color: inherit;      /* Mengikuti warna teks di sekitarnya */
+        }
     </style>
     <div class="container">
         <div class="header">
@@ -121,7 +144,10 @@
                 <div class="menu-item">Home</div>
                 <div class="menu-item">Berita</div>
                 <div class="menu-item">About</div>
-                <div class="menu-item">Contact</div>
+                <a href="#kontak">
+                    <div class="menu-item">Contact</div>
+                </a>
+                
              </div>
              <!-- Akhir menu -->
         </div>
@@ -222,6 +248,34 @@
                     
                 </div>
             </div>
+
+            <!-- Akhir Halaman Home -->
+            <!-- Awal Halaman Kontak -->
+             <div class="kontak" id="kontak">
+                <div class="keterangan">
+                    <b>Kontak Kami</b>
+                    <p>Silahkan tinggalkan pesan Anda padan kolom yang
+                        tersedia
+                    </p>
+                </div>
+                <div class="formulir">
+                    <form action="aksi_pesan.php" method="GET">
+                        <label for="">Nama Anda</label>
+                        <input class="input-text" type="text" name="nama">
+
+                        <label for="">Email Anda</label>
+                        <input class="input-text" type="email" name="email">
+
+                        <label for="">Pesan Anda</label>
+
+                        <textarea rows="10" name="pesan" id="" class="input-text">
+
+                        </textarea>
+
+                        <button class="tombol" type="submit">POST</button>
+                    </form>
+                </div>
+             </div>
         </div>
         <div class="footer">
             <div class="footer-1">
