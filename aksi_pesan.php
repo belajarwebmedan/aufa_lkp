@@ -21,4 +21,10 @@ VALUES ('$nama','$email','$pesan','Belum Dibaca')
 
 mysqli_query($koneksi,$sql);
 
-echo mysqli_affected_rows($koneksi);
+$hasil = mysqli_affected_rows($koneksi);
+
+if ($hasil>=1) {
+    header("Location: http://localhost/aufa_lkp?pesan=berhasil#kontak");
+}else{
+    header("Location: http://localhost/aufa_lkp?pesan=gagal#kontak");
+}

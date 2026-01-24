@@ -136,6 +136,29 @@
             text-decoration: none; /* Menghilangkan garis bawah */
             color: inherit;      /* Mengikuti warna teks di sekitarnya */
         }
+        .pesan-berhasil{
+            position: relative;
+            font-weight:bold;
+            background-color:var(--bg2);
+            text-align: center;
+            padding: 5px;
+            margin: 5px;
+        }
+        .tutup{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-style: italic;
+            cursor: pointer;
+        }
+        .tutup:hover{
+            color: var(--bg4);
+            cursor: pointer;
+            font-style: bold;
+        }
+        .d-none{
+            display: none;
+        }
     </style>
     <div class="container">
         <div class="header">
@@ -146,6 +169,10 @@
                 <div class="menu-item">About</div>
                 <a href="#kontak">
                     <div class="menu-item">Contact</div>
+                </a>
+
+                <a href="login.php">
+                    <div class="menu-item">Login</div>
                 </a>
                 
              </div>
@@ -257,6 +284,18 @@
                     <p>Silahkan tinggalkan pesan Anda padan kolom yang
                         tersedia
                     </p>
+
+                    <?php
+                    if(isset($_GET['pesan']))
+                    {
+                    ?>
+                    <div class="pesan-berhasil" id="bagian_pesan">
+                        Terima kasih telah menghubungi kami..
+                       <div class="tutup" onclick="sembunyi()">X</div> 
+                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
                 <div class="formulir">
                     <form action="aksi_pesan.php" method="GET">
@@ -327,6 +366,11 @@
             </div>
         </div>
     </div>
-    
+<script>
+    function sembunyi(){
+        let elemen = document.getElementById('bagian_pesan');
+        elemen.classList.add('d-none');
+    };
+</script>
 </body>
 </html>
